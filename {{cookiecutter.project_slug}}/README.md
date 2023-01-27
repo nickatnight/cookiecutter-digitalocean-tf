@@ -21,12 +21,12 @@ $ terraform plan
 $ terraform apply
 ```
 
-Once Terraform has finished, copy the "Public-Ip" from the terminal output and ssh into the newly created Droplet
+Once Terraform has successfully finished, copy the "Public-Ip" from the terminal output and ssh into the newly created Droplet
 ```sh
 $ ssh ubuntu@ip-from-stdout
 ```
 
 ## Architecture
 <p align="center">
-    <a href="#"><img alt="Synthwave" src="https://i.imgur.com/JYGCmAQ.png"></a>
+    <a href="#"><img alt="https://imgur.com/a/mMVgp2H" src="https://i.imgur.com/0csCq0V.png"></a>
 </p>
