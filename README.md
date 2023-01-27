@@ -1,10 +1,10 @@
 # cookiecutter-digitalocean-tf
-[Cookiecutter](https://github.com/cookiecutter/cookiecutter) template for scaffolding infrastructure for a web application/api on DigitalOcean with Terraform and Ansible
+[Cookiecutter](https://github.com/cookiecutter/cookiecutter) template for scaffolding web application/api infrastructure on DigitalOcean with Terraform and Ansible
 
 ## Quickstart
-Install the latest Cookiecutter if you haven't installed it yet (this requires Cookiecutter 1.4.0 or higher):
+Install the latest Cookiecutter if you haven't installed it yet (this requires Cookiecutter 1.4.0 or higher)..and latest version of Python `requests` library:
 ```sh
-pip install -U cookiecutter
+pip install -U cookiecutter requests
 ```
 
 Generate project:

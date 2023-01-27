@@ -1,5 +1,5 @@
 resource "digitalocean_firewall" "{{ cookiecutter.lower_env_name }}_{{ cookiecutter.project_slug_simple }}" {
-  name = "{{ cookiecutter.project_slug }}-22-80-and-443"
+  name = "{{ cookiecutter.project_slug }}-22-80-443-9110-9120"
 
   droplet_ids = [digitalocean_droplet.{{ cookiecutter.lower_env_name }}_{{ cookiecutter.project_slug_simple }}.id]
 
@@ -18,6 +18,18 @@ resource "digitalocean_firewall" "{{ cookiecutter.lower_env_name }}_{{ cookiecut
   inbound_rule {
     protocol         = "tcp"
     port_range       = "443"
+    source_addresses = ["0.0.0.0/0", "::/0"]
+  }
+
+  inbound_rule {
+    protocol         = "tcp"
+    port_range       = "9110"
+    source_addresses = ["0.0.0.0/0", "::/0"]
+  }
+
+  inbound_rule {
+    protocol         = "tcp"
+    port_range       = "9120"
     source_addresses = ["0.0.0.0/0", "::/0"]
   }
 
