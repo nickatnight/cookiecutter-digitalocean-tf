@@ -1,0 +1,10 @@
+---
+
+- name: Create data dirs
+  file:
+    {% raw %}
+    path: "{{ item }}"
+    {% endraw %}
+    state: directory
+  with_items:
+    - /data/db

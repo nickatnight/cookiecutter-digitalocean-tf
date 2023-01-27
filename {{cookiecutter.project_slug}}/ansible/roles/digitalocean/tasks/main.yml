@@ -1,0 +1,7 @@
+---
+
+- name: Download and unarchive doctl
+  unarchive:
+    src: https://github.com/digitalocean/doctl/releases/download/v{{ cookiecutter.doctl_version }}/doctl-{{ cookiecutter.doctl_version }}-linux-amd64.tar.gz
+    dest: /usr/local/bin
+    remote_src: yes

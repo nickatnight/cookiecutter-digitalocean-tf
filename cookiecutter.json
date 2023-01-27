@@ -1,0 +1,19 @@
+{
+    "project_name": "Base Project",
+    "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+    "project_slug_simple": "{{ cookiecutter.project_name|lower|replace(' ', '') }}",
+    "project_root_domain": "{{cookiecutter.project_slug_simple}}.com",
+    "sub_domain_name": "api",
+    "lower_env_name": "staging",
+    "ssh_pub_key_file": "/Users/beta/.ssh/id_rsa.pub",
+
+    "doctl_version": "1.92.0",
+
+    "do_droplet_ssh_key_id": "32323295",
+    "do_droplet_image": "ubuntu-22-04-x64",
+    "do_droplet_size": "s-1vcpu-1gb",
+    "do_droplet_region": "sfo3",
+
+    "do_container_registry_name": "mycr",
+    "do_container_registry_subscription_tier_slug": "basic"
+}

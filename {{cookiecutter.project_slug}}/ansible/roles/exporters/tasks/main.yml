@@ -1,0 +1,32 @@
+  
+---
+# see thread https://github.com/ansible/ansible/issues/51663 for lock hack
+- name: install pip
+  apt:
+    name: python3-pip
+    update_cache: no
+    state: present
+  register: apt_action
+  retries: 100
+  until: apt_action is success or ('Failed to lock apt for exclusive operation' not in apt_action.msg and '/var/lib/dpkg/lock' not in apt_action.msg)
+
+- name: install stack deps
+  pip:
+    name:
+      - jsondiff
+      - pyyaml
+
+- name: Copy docker-compose file
+  copy:
+    src: ../../../../docker-compose.monitoring.yml
+    dest: /tmp/docker-compose.monitoring.yml
+    owner: ubuntu
+    group: ubuntu
+    mode: '0644'
+
+- name: deploy monitoring stack from uploaded yaml definition
+  docker_stack:
+    state: present
+    name: monitoring
+    compose: 
+      - /tmp/docker-compose.monitoring.yml

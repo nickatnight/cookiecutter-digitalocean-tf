@@ -1,0 +1,20 @@
+---
+
+- hosts: all
+  gather_facts: False
+  become: yes
+
+- name: Provision
+  hosts: all
+  become: yes
+  vars_files:
+    - env_vars/common.yml
+    {% raw %}
+    - env_vars/{{ env_name }}.yml
+    {% endraw %}
+  roles:
+    - { role: docker, tags: docker }
+    - { role: users, tags: users }
+    - { role: digitalocean, tags: digitalocean }
+    - { role: data-dirs, tags: data-dirs }
+    - { role: exporters, tags: prom }
