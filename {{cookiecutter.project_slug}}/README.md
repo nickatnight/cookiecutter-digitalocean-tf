@@ -1,6 +1,6 @@
 # {{ cookiecutter.project_slug }}
 
-Deploy production ready web servers to DigitalOcean
+Scaffold infrastructure for web apis/apps.
 
 ## Features
 - Terraform modules to scaffold DigitalOcean [Droplet](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/droplet), [Firewall](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/firewall), [Domain](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/domain), and [Container Registry](https://registry.terraform.io/providers/digitalocean/digitalocean/latest/docs/resources/container_registry) resources.
@@ -28,5 +28,5 @@ $ ssh ubuntu@ip-from-stdout
 
 ## Architecture
 <p align="center">
-    <a href="#"><img alt="https://imgur.com/a/mMVgp2H" src="https://i.imgur.com/0csCq0V.png"></a>
+    <a href="#"><img alt="https://imgur.com/xmDWRic" src="https://i.imgur.com/xmDWRic.png"></a>
 </p>
