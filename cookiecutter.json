@@ -14,6 +14,6 @@
     "do_droplet_size": "s-1vcpu-1gb",
     "do_droplet_region": "sfo3",
 
-    "do_container_registry_name": "mycr",
+    "do_container_registry_name": "changemecr",
     "do_container_registry_subscription_tier_slug": "basic"
 }
